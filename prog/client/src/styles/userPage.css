@@ -1,0 +1,166 @@
+.user-profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: white;
+}
+
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+.profile-avatar {
+    margin-bottom: 20px;
+    background-color: #1890ff;
+    color: white;
+}
+
+.profile-username {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.profile-actions {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.profile-actions .ant-btn {
+    margin-bottom: 12px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logout-btn {
+    background-color: #1890ff;
+    border-color: #1890ff;
+    color: white;
+}
+
+.delete-account-btn {
+    color: #ff4d4f;
+    border-color: #ff4d4f;
+    background: white;
+}
+
+.delete-account-btn:hover {
+    color: #ff4d4f;
+    border-color: #ff4d4f;
+    background: #fff2f0;
+}
+
+.profile-content {
+    padding: 20px 30px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+}
+
+.section-title {
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.profile-info {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border: 1px solid #f0f0f0;
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.edit-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    color: #333;
+    border-color: #d9d9d9;
+    background: white;
+}
+
+.edit-btn:hover {
+    border-color: #1890ff;
+    color: #1890ff;
+}
+
+.edit-form {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border: 1px solid #f0f0f0;
+}
+
+.save-profile-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #333;
+    border-color: #d9d9d9;
+    background: white;
+}
+
+.save-profile-btn:hover {
+    border-color: #1890ff;
+    color: #1890ff;
+}
+
+.cancel-btn {
+    margin-left: 10px;
+    color: #333;
+    border-color: #d9d9d9;
+    background: white;
+}
+
+.cancel-btn:hover {
+    border-color: #ff4d4f;
+    color: #ff4d4f;
+}
+
+/* Стили для всех основных кнопок */
+.ant-btn:not(.logout-btn):not(.delete-account-btn) {
+    color: #333;
+    border-color: #d9d9d9;
+    background: white;
+}
+
+.ant-btn:not(.logout-btn):not(.delete-account-btn):hover {
+    border-color: #1890ff;
+    color: #1890ff;
+}
+
+@media (max-width: 768px) {
+    .profile-sidebar {
+        margin-bottom: 30px;
+    }
+    
+    .profile-content {
+        padding: 20px 15px;
+    }
+}

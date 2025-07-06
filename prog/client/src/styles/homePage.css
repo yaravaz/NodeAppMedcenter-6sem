@@ -1,0 +1,57 @@
+/* Стили для слайдера врачей */
+.doctor-card-container {
+    padding: 0 15px;
+  }
+  
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  .ant-card {
+    margin: 0 auto;
+    max-width: 240px;
+    text-align: center;
+  }
+  
+  .ant-card-meta-title {
+    white-space: normal;
+  }
+  
+  .btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #1890ff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .btn-secondary:hover {
+    background: #40a9ff;
+  }

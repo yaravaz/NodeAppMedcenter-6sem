@@ -1,0 +1,58 @@
+.doctor-dashboard {
+  padding: 20px;
+}
+
+.doctor-name-header {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  justify-content: flex-start;
+  padding-left: 0;
+  margin-left: 0; 
+}
+
+.doctor-icon {
+  margin-right: 10px;
+  font-size: 1.6rem;
+  color: #1890ff;
+}
+
+.doctor-profile-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.doctor-photo-container {
+  flex: 0 0 300px;
+}
+
+.doctor-photo {
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.doctor-info-container {
+  flex: 1;
+}
+
+.doctor-info .ant-descriptions-item-label {
+  font-weight: bold;
+  width: 150px;
+}
+
+.schedule-table {
+  margin-top: 15px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .doctor-profile-container {
+    flex-direction: column;
+  }
+  
+  .doctor-photo-container {
+    margin-bottom: 20px;
+    align-self: center;
+  }
+}

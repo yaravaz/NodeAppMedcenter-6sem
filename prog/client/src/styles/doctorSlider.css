@@ -1,0 +1,77 @@
+.doctor-photo-slider {
+    height: 300px; 
+    width: 100%;
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f0f0f0;
+  }
+  
+  .doctor-photo-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+  }
+
+.doctors-slider {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .doctors-slider h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .doctor-card-slider {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .doctor-photo-slider {
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .doctor-photo-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .doctor-info-slider {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .doctor-info-slider h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+  }
+  
+  .specialization-slider {
+    font-weight: bold;
+    color: #3498db;
+    margin: 0.5rem 0;
+  }
+  
+  .category-slider {
+    color: #7f8c8d;
+    margin: 0.5rem 0;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #054976;
+  }
+  
+  .swiper-pagination-bullet-active {
+    color: #054976;
+  }

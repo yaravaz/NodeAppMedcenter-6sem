@@ -1,0 +1,490 @@
+/* Основные стили страницы */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-color);
+}
+
+.page-header h1 {
+  color: var(--primary-color);
+}
+
+/* Табы */
+.appointments-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--light-color);
+  padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* Сетка записей */
+.appointments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .appointments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Карточка записи */
+.appointment-card {
+  background: var(--text-light);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.appointment-card.upcoming {
+  border-left: 3px solid var(--secondary-color);
+}
+
+.appointment-card.completed {
+  border-left: 3px solid #27ae60;
+}
+
+.appointment-card.cancelled {
+  border-left: 3px solid var(--accent-color);
+}
+
+.card-header {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doctor-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.doctor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-initials {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.doctor-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.specialization {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+.appointment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--dark-color);
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.upcoming {
+  background-color: #e1f0ff;
+  color: var(--secondary-color);
+}
+
+.status-badge.completed {
+  background-color: #e0f7ed;
+  color: #27ae60;
+}
+
+.status-badge.cancelled {
+  background-color: #ffebee;
+  color: var(--accent-color);
+}
+
+.expand-icon {
+  transition: transform 0.3s ease;
+  color: var(--secondary-color);
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Детали карточки */
+.card-details {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid var(--light-color);
+}
+
+.details-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.detail-icon {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.detail-label {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+.detail-value {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--dark-color);
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Нет записей */
+.no-appointments {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.no-appointments h3 {
+  margin: 1rem 0 0.5rem 0;
+  color: var(--primary-color);
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--text-light);
+  border-radius: 4px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--light-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.appointment-info {
+  background-color: var(--light-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.appointment-info p {
+  margin: 0.5rem 0;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+}
+
+.modal-footer {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--light-color);
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+/* Загрузка */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--secondary-color);
+}
+
+.loading p {
+  margin-top: 1rem;
+}
+
+/* Основные отступы и расположение */
+.patient-appointments-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-color);
+}
+
+.appointments-header h1 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.new-appointment-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Контейнер табов с отступами */
+.appointments-tabs-container {
+  margin-bottom: 2rem;
+}
+
+.appointments-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+/* Основное содержимое с отступом */
+.appointments-content {
+  margin-top: 1.5rem;
+}
+
+/* Карточки с отступами */
+.appointments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .appointments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.appointment-card {
+  margin-bottom: 1rem;
+}
+
+/* Кнопки действий в карточке */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card-actions .btn {
+  flex: 1;
+  padding: 0.75rem;
+}
+
+/* Состояние "нет записей" */
+.no-appointments {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+}
+
+.no-appointments h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.no-appointments .btn {
+  margin-top: 1.5rem;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  padding: 1rem;
+}
+
+.modal-content {
+  margin: 2rem auto;
+}
+
+.modal-footer {
+  margin-top: 1.5rem;
+}
+
+/* Загрузка */
+.loading-container {
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для пагинации */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.pagination-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--light-color);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background-color: var(--light-color);
+}
+
+.pagination-btn.active {
+  background-color: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+.pagination-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .patient-appointments-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .appointments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pagination {
+    gap: 0.25rem;
+  }
+  
+  .pagination-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}

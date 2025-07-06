@@ -1,0 +1,97 @@
+.doctor-details-page {
+  padding: 24px 0;
+}
+
+.doctor-header {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.doctor-photo-deitals {
+  width: 250px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.doctor-photo-deitals img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f5;
+  color: #1890ff;
+}
+
+.doctor-main-info {
+  flex-grow: 1;
+}
+
+.doctor-specialization {
+  margin: 16px 0;
+}
+
+.doctor-contacts p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.schedule-item {
+  padding: 8px;
+}
+
+.schedule-item.not-working {
+  color: #ff4d4f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-back {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #d9d9d9;
+}
+
+.category {
+  font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .doctor-header {
+    flex-direction: column;
+  }
+  
+  .doctor-photo-deitals {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+}

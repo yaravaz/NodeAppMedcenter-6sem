@@ -1,0 +1,137 @@
+ .admin-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.admin-logo {
+  padding: 0 20px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #34495e;
+}
+
+.admin-logo a {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.admin-nav-link:hover {
+  background-color: #34495e;
+  color: #3498db;
+}
+
+.admin-nav-link i {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  background-color: white;
+  padding: 15px 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-icon {
+  color: #3498db;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s;
+}
+
+.logout-btn:hover {
+  color: #e74c3c;
+}
+
+.admin-content {
+  padding: 25px;
+  flex: 1;
+  background-color: #f5f7fa;
+}
+ 
+ .dashboard-container {
+    padding: 20px;
+  }
+  
+  .dashboard-title {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+  
+  .stats-row {
+    margin-bottom: 25px;
+  }
+  
+  .stat-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .dashboard-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 100%;
+  }
+  
+  .ant-card-head-title {
+    color: #2c3e50;
+    font-weight: 500;
+  }

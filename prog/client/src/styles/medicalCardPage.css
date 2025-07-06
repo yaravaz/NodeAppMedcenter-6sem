@@ -1,0 +1,12 @@
+.medical-card-page {
+  padding: 24px;
+}
+
+.medical-card-page .ant-descriptions-item-label {
+  font-weight: bold;
+  width: 200px;
+}
+
+.medical-card-page .ant-form {
+  margin-top: 24px;
+}
